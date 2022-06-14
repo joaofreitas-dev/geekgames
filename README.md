@@ -1,5 +1,4 @@
-# Link do Deploy: https://catalogo-games.herokuapp.com/
-
+# Link do Deploy: https://deploy-geekgames.herokuapp.com/
 # Geek Games
 
 Um projeto teste para armazenar dados de jogos.
