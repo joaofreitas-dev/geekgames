@@ -47,9 +47,7 @@ const cadastroAdd = async (req, res) => {
             !jogo.genero ||
             !jogo.plataforma ||
             !jogo.preco ||
-            !jogo.desenvolvedor ||
-            !jogo.reqmin ||
-            !jogo.reqideal
+            !jogo.desenvolvedor
         ){
             message = "Preencha todos os campos do formulário!"
             type = "danger"
@@ -80,7 +78,7 @@ const editar1 = async (req, res) => {
 const editar = async (req, res) => {
     try{
         const jogo = await Jogo.findByPk(req.params.id);
-        const {titulo, imagem, descricao, genero, plataforma, preco, desenvolvedor, reqmin, reqideal} = req.body;
+        const {titulo, imagem, descricao, genero, plataforma, preco, desenvolvedor} = req.body;
 
         jogo.titulo = titulo;
         jogo.imagem =imagem;
@@ -89,8 +87,6 @@ const editar = async (req, res) => {
         jogo.plataforma = plataforma;
         jogo.preco = preco;
         jogo.desenvolvedor = desenvolvedor;
-        jogo.reqmin = reqmin;
-        jogo.reqideal = reqideal;
 
         const jogoAtualizado = await jogo.save(); 
         res.redirect("/"); 
