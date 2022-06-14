@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://static.thenounproject.com/png/1451262-200.png">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Catálogo de jogos</title>
+</head>
+
+<body>
+  <nav>
+    <div class="container-logo">
+      <img src="img/pngegg.png" alt="game logo" class="logo">
+      <span class="logo-text">GEEK GAMES</span>
+    </div>
+
+    <ul class="nav-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Jogos</a></li>
+      <li><a href="/cadastro">Cadastrar Novo Jogo</a></li>
+
+  </nav>
+
+  <main>
+    <div class="title-section">
+      <a name="games"></a>
+      <h2>CADASTRE UM NOVO JOGO</h2>
+    </div>
+
+    <section class="section-form">
+      <span><% if(message != ""){ message } %></span>
+        <form action="/cadastroAdd" method="post" class="form-cadastro">
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" name="titulo" required>
+          <label for="imagem">Link da imagem:</label>
+          <input type="text" id="imagem" name="imagem" required>
+          <label for="descricao">Descrição:</label>
+          <input type="text" id="descricao" name="descricao" required>
+          <label for="genero">Gênero:</label>
+          <input type="text" id="genero" name="genero" required>
+          <label for="plataforma">Plataforma:</label>
+          <input type="text" id="plataforma" name="plataforma" required>
+          <label for="preco">Preço:</label>
+          <input type="text" id="preco" name="preco" required>
+          <label for="desenvolvedor">Desenvolvedor:</label>
+          <input type="text" id="desenvolvedor" name="desenvolvedor" required>
+          <label for="req-min">Requesitos mínimos:</label>
+          <input type="text" id="reqmin" name="reqmin" required>
+          <label for="reqideal">Requesitos recomendados:</label>
+          <input type="text" id="reqideal" name="reqideal" required>
+          <button class="btnCadastrar" type="submit" onclick="cadastro()">Cadastrar</button>
+        </form>
+    </section>
+  </main>
+
+  <footer>
+    <h3>Desenvolvido por: João Freitas</h3>
+    <a href="http://github.com/joaofreitas-dev" target="_blank">Perfil no GitHub</a>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

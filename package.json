@@ -1,0 +1,32 @@
+{
+  "name": "catalogo-parte-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaofreitas-dev/catalogo-parte-2.git"
+  },
+  "keywords": [],
+  "author": "João Freitas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaofreitas-dev/catalogo-parte-2/issues"
+  },
+  "homepage": "https://github.com/joaofreitas-dev/catalogo-parte-2#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.20.1"
+  }
+}
