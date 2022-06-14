@@ -51,7 +51,7 @@ const cadastroAdd = async (req, res) => {
         ){
             message = "Preencha todos os campos do formulário!"
             type = "danger"
-            return res.redirecr("/cadastro");
+            return res.redirecr("/");
         }
         await Jogo.create(jogo);
         res.redirect("/")
@@ -86,7 +86,7 @@ const editar = async (req, res) => {
         jogo.genero = genero;
         jogo.plataforma = plataforma;
         jogo.preco = preco;
-        jogo.desenvolvedor = desenvolvedor;
+        jogo.desenvolvedor = desenvolvedor
 
         const jogoAtualizado = await jogo.save(); 
         res.redirect("/"); 
